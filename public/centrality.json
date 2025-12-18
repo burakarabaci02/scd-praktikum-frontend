@@ -1,0 +1,287 @@
+{
+  "Helsinki": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.10486891385767791,
+    "betweenness": 0.0029507715076751307
+  },
+  "Turku": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.11642411642411643,
+    "betweenness": 0.02015856371546734
+  },
+  "Tampere": {
+    "degree": 0.14285714285714285,
+    "closeness": 0.10486891385767791,
+    "betweenness": 0.0
+  },
+  "Stockholm": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.11642411642411643,
+    "betweenness": 0.017207792207792207
+  },
+  "\u00d6rebro": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.13053613053613053,
+    "betweenness": 0.07381279842660567
+  },
+  "G\u00f6teborg": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.14814814814814814,
+    "betweenness": 0.10548216087162048
+  },
+  "Malm\u00f6": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.14893617021276595,
+    "betweenness": 0.05417222228448155
+  },
+  "Kopenhagen": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.16766467065868262,
+    "betweenness": 0.11318126471543112
+  },
+  "Odense": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.16766467065868262,
+    "betweenness": 0.038920060007697155
+  },
+  "Aarhus": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.14698162729658792,
+    "betweenness": 0.006260897528840113
+  },
+  "Fehmarnbelt-Tunnel": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.16666666666666666,
+    "betweenness": 0.129462822678842
+  },
+  "L\u00fcbeck": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.18729096989966554,
+    "betweenness": 0.15643510361394625
+  },
+  "Hamburg": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.1848184818481848,
+    "betweenness": 0.19957487809698374
+  },
+  "Hannover": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.208955223880597,
+    "betweenness": 0.211120897038237
+  },
+  "Kassel": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.23628691983122363,
+    "betweenness": 0.18377494713181386
+  },
+  "W\u00fcrzburg": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.2178988326848249,
+    "betweenness": 0.014273823358301853
+  },
+  "N\u00fcrnberg": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.23931623931623933,
+    "betweenness": 0.18876358146753608
+  },
+  "M\u00fcnchen": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.2814070351758794,
+    "betweenness": 0.3857287152743347
+  },
+  "Innsbruck": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.25925925925925924,
+    "betweenness": 0.04362742489377794
+  },
+  "Brenner-Basistunnel": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.24778761061946902,
+    "betweenness": 0.033808846907067105
+  },
+  "Trento": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.25,
+    "betweenness": 0.02356835676854473
+  },
+  "Verona": {
+    "degree": 0.26785714285714285,
+    "closeness": 0.2814070351758794,
+    "betweenness": 0.3087015552527504
+  },
+  "Bologna": {
+    "degree": 0.30357142857142855,
+    "closeness": 0.2679425837320574,
+    "betweenness": 0.23407377316077857
+  },
+  "Florenz": {
+    "degree": 0.2857142857142857,
+    "closeness": 0.2445414847161572,
+    "betweenness": 0.14483224212339815
+  },
+  "Rom": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.21374045801526717,
+    "betweenness": 0.12529893562516056
+  },
+  "Neapel": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.18791946308724833,
+    "betweenness": 0.22563810648226232
+  },
+  "Bari": {
+    "degree": 0.125,
+    "closeness": 0.1590909090909091,
+    "betweenness": 0.010389610389610397
+  },
+  "Palermo": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.16326530612244897,
+    "betweenness": 0.0512012987012987
+  },
+  "Messina": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.1432225063938619,
+    "betweenness": 0.02679035250463822
+  },
+  "Valletta": {
+    "degree": 0.14285714285714285,
+    "closeness": 0.14249363867684478,
+    "betweenness": 0.0
+  },
+  "Berlin": {
+    "degree": 0.125,
+    "closeness": 0.1564245810055866,
+    "betweenness": 0.0
+  },
+  "Frankfurt": {
+    "degree": 0.26785714285714285,
+    "closeness": 0.23529411764705882,
+    "betweenness": 0.13545078107055275
+  },
+  "Stuttgart": {
+    "degree": 0.19642857142857142,
+    "closeness": 0.24242424242424243,
+    "betweenness": 0.1273593451665322
+  },
+  "Catania": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.1432225063938619,
+    "betweenness": 0.04002241805813234
+  },
+  "Reggio Calabria": {
+    "degree": 0.19642857142857142,
+    "closeness": 0.14358974358974358,
+    "betweenness": 0.0007142857142857142
+  },
+  "Taranto": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.16091954022988506,
+    "betweenness": 0.019484384662956076
+  },
+  "Cagliari": {
+    "degree": 0.10714285714285714,
+    "closeness": 0.0,
+    "betweenness": 0.0
+  },
+  "Siracusa": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.14285714285714285,
+    "betweenness": 0.00022727272727272725
+  },
+  "Bozen": {
+    "degree": 0.19642857142857142,
+    "closeness": 0.2731707317073171,
+    "betweenness": 0.26975637847097506
+  },
+  "Padua": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.26291079812206575,
+    "betweenness": 0.03571729799592662
+  },
+  "Modena": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.25339366515837103,
+    "betweenness": 0.028000076471432416
+  },
+  "Parma": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.2692307692307692,
+    "betweenness": 0.0706623316465355
+  },
+  "Ravenna": {
+    "degree": 0.19642857142857142,
+    "closeness": 0.25688073394495414,
+    "betweenness": 0.020553538509792788
+  },
+  "La Spezia": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.26291079812206575,
+    "betweenness": 0.048767032811835614
+  },
+  "Perugia": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.23529411764705882,
+    "betweenness": 0.17287886017780632
+  },
+  "Ancona": {
+    "degree": 0.14285714285714285,
+    "closeness": 0.19377162629757785,
+    "betweenness": 0.018629898240287854
+  },
+  "Pescara": {
+    "degree": 0.17857142857142855,
+    "closeness": 0.2,
+    "betweenness": 0.03625196772924046
+  },
+  "K\u00f6ln": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.20437956204379562,
+    "betweenness": 0.03194586543069374
+  },
+  "D\u00fcsseldorf": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.2074074074074074,
+    "betweenness": 0.02519469404724819
+  },
+  "Dortmund": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.2066420664206642,
+    "betweenness": 0.042418471545823025
+  },
+  "Aachen": {
+    "degree": 0.23214285714285712,
+    "closeness": 0.20437956204379562,
+    "betweenness": 0.017698160071292893
+  },
+  "Br\u00fcssel": {
+    "degree": 0.21428571428571427,
+    "closeness": 0.17834394904458598,
+    "betweenness": 0.04770978445821274
+  },
+  "Amsterdam": {
+    "degree": 0.125,
+    "closeness": 0.15217391304347827,
+    "betweenness": 0.002966449390934517
+  },
+  "Rotterdam": {
+    "degree": 0.1607142857142857,
+    "closeness": 0.17721518987341772,
+    "betweenness": 0.007478802126911368
+  },
+  "Paris": {
+    "degree": 0.14285714285714285,
+    "closeness": 0.2,
+    "betweenness": 0.08080115134699377
+  },
+  "Lyon": {
+    "degree": 0.14285714285714285,
+    "closeness": 0.20437956204379562,
+    "betweenness": 0.1353071656000248
+  },
+  "Marseille": {
+    "degree": 0.08928571428571427,
+    "closeness": 0.1702127659574468,
+    "betweenness": 0.0015450305466539233
+  }
+}

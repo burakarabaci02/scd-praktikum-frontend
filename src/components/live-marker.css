@@ -1,0 +1,14 @@
+.pulse {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: cyan;
+    box-shadow: 0 0 12px cyan;
+    animation: pulseAnim 1.2s infinite;
+}
+
+@keyframes pulseAnim {
+    0% { transform: scale(0.8); opacity: 0.9; }
+    50% { transform: scale(1.25); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.9; }
+}
