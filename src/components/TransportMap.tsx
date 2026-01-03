@@ -105,6 +105,7 @@ export default function TransportMap({
   const lastTimeRef = useRef<number | null>(null);
 
   const [hoverInfo, setHoverInfo] = useState<any | null>(null);
+  const [disabledEdges, setDisabledEdges] = useState<Set<string>>(new Set());
 
   // -------------------------------
   // Farbskala für Kanten
@@ -320,6 +321,7 @@ export default function TransportMap({
       }
 
       const key = `${e.from}→${e.to}`;
+      const isDisabled = disabledEdges.has(key);
       const used = (mainRouteUsage?.[key] ?? 0) + (altRouteUsage?.[key] ?? 0);
       const usedMain = mainRouteUsage?.[key] ?? 0;
       const usedAlt = altRouteUsage?.[key] ?? 0;
@@ -341,24 +343,30 @@ export default function TransportMap({
       if (!usedMain && !usedAlt && loadFactor < 1) return;
 
       // Styling für Routen
-      let color = "blue"; // Route A
+      let color = "blue";
       let weight = 4;
       let dashArray: string | null = null;
 
-      if (usedAlt > 0 && usedMain === 0) {
-        color = "green"; // Route B
-        dashArray = "6, 8"; // gestrichelt
-      }
-      if (usedMain > 0 && usedAlt > 0) {
-        color = "purple"; // Mischfall
-        dashArray = "4, 6";
-      }
+      if (isDisabled) {
+        color = "#555";
+        weight = 3;
+        dashArray = "4,6";
+      } else {
+        if (usedAlt > 0 && usedMain === 0) {
+          color = "green"; // Route B
+          dashArray = "6, 8"; // gestrichelt
+        }
+        if (usedMain > 0 && usedAlt > 0) {
+          color = "purple"; // Mischfall
+          dashArray = "4, 6";
+        }
 
-      // ---- ENGAPSS-OVERRIDE: unabhängig von Route-Farbe ----
-      if (loadFactor >= 1) {
-        color = "#ff2b2b"; // satteres Rot
-        weight = 8; // dickere Linie
-        dashArray = null; // immer durchgezogen
+        // ---- ENGAPSS-OVERRIDE: unabhängig von Route-Farbe ----
+        if (loadFactor >= 1) {
+          color = "#ff2b2b"; // satteres Rot
+          weight = 8; // dickere Linie
+          dashArray = null; // immer durchgezogen
+        }
       }
 
       // Heatmap bleibt als Overlay möglich: wenn du willst, color durch heatmap ersetzen.
@@ -372,12 +380,22 @@ export default function TransportMap({
         {
           color,
           weight,
-          opacity: 0.9,
+          opacity: isDisabled ? 0.5 : 0.9,
           dashArray: dashArray ?? undefined,
         }
       );
 
-      line.on("click", () => {});
+      line.on("click", () => {
+        setDisabledEdges(prev => {
+          const next = new Set(prev);
+          if (next.has(key)) {
+            next.delete(key);
+          } else {
+            next.add(key);
+          }
+          return next;
+        });
+      });
 
       line.on("mouseover", () => {
         setHoverInfo({
@@ -398,11 +416,12 @@ export default function TransportMap({
         <i>Verbindung:</i> ${connection}<br>
         <i>Distanz:</i> ${dist} km<br>
         <i>Geschwindigkeit:</i> ${speed} km/h<br>
-        <i>Tägliche Kapazität:</i> ${computeCapacityClass(
-          e,
-          n1,
-          n2
-        )} Transporte/Tag
+        <i>Tägliche Kapazität:</i> ${computeCapacityClass(e, n1, n2)}<br>
+        ${
+          isDisabled
+            ? `<span style="color:red"><b>❌ Ausgefallen</b></span>`
+            : `<span style="color:green">✔ Aktiv</span>`
+        }
       `;
 
       line.bindTooltip(tooltipHtml);
@@ -458,6 +477,7 @@ export default function TransportMap({
       decorator.addTo(edgeLayer.current!);
 
       // Moving-Dot Marker für diese genutzte Kante anlegen
+      if (isDisabled) return;
       if (mapRef.current) {
         const animatedMarker = L.circleMarker([n1.lat, n1.lon], {
           radius: 5,
@@ -504,7 +524,7 @@ export default function TransportMap({
       const bounds = L.latLngBounds(routeCoords);
       mapRef.current.fitBounds(bounds, { padding: [50, 50] });
     }
-  }, [graph, edgeUsage, mainRouteUsage, altRouteUsage]);
+  }, [graph, edgeUsage, mainRouteUsage, altRouteUsage, disabledEdges]);
 
   // -------------------------------
   // 3) Labels (Städtenamen) bei Zoom
